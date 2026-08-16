@@ -1,0 +1,39 @@
+E-Ticaret Müşteri Kaybı (Churn) Analizi ve Win-Back Stratejisi
+
+Hazırlayan: Muhammet Tamer Yıldız Kapsam: Bir e-ticaret platformunun müşteri kaybı (churn) verisi üzerinde kök neden analizi ve geri kazanım (win-back) potansiyeli değerlendirmesi.
+
+Klasördeki Dosyalar
+Dosya	Açıklama
+Xin_E-Commerce.xlsx	İşlenmiş veri. project.py ile temizlenmiş, eksik/hatalı kayıtları düzenlenmiş ve analiz için hazırlanmış ara veri seti.
+Xin_E-Commerce-2.xlsx	Ham veri. Herhangi bir işlem görmemiş orijinal veri seti.
+final.xlsx	Final veri/analiz çıktısı. Churn metrikleri, segment bazlı oranlar ve win-back hesaplamalarının final hâli — Power BI raporunun beslendiği kaynak.
+project.py	Veri temizleme ve analiz adımlarını uçtan uca yürüten Python betiği (ham veriden final veri setine kadar).
+Sunum.pbix	Power BI raporu. Depo-ev mesafesi, müşterilik süresi, uygulama kullanımı, memnuniyet/şikayet, demografik ve şehir bazlı churn görselleri ile kategori kırılımını içerir.
+Churn_Analizi_ve_Win-Back_Stratejisi_Muhammet_Tamer_Yildiz.pptx	Bulguların ve win-back stratejisinin özetlendiği sunum dosyası.
+
+Proje Özeti
+
+Amaç: Müşteri kaybının hangi davranışsal ve demografik etkenlerle ilişkili olduğunu ortaya koymak ve kaybedilen müşterilerden ne kadarının geri kazanılabileceğini (win-back potansiyeli) tahmin etmek.
+
+Yöntem:
+
+Ham veri (Xin_E-Commerce-2.xlsx) Python ile temizlenip işlendi (project.py → Xin_E-Commerce.xlsx).
+İşlenmiş veri üzerinden churn metrikleri ve segment kırılımları hesaplanarak final veri seti (final.xlsx) oluşturuldu.
+Final veri Power BI'a (Sunum.pbix) bağlanarak segment bazlı churn oranları görselleştirildi.
+Bulgular ve win-back stratejisi PowerPoint sunumunda (.pptx) özetlendi.
+
+Öne Çıkan Bulgular:
+
+Depo mesafesi, müşterilik süresi ve uygulama kullanım süresi eksik girilen kayıtlarda churn ~2 kat daha yüksek.
+Depo-ev mesafesi churn ile doğrusal değil, bantsal bir ilişki gösteriyor: ~18 km ve ~31 km civarındaki müşteri gruplarında churn %29–34'e sıçrıyor.
+5 yıldız veren müşterilerin %45'i yine de şikayet bildirmiş — memnuniyet skoru tek başına yeterli bir gösterge değil.
+Bekar erkek müşterilerde churn (%28,13) tüm demografik segmentlerin en yükseği.
+Katman 1, en düşük ortalama orana rağmen müşteri hacmi nedeniyle en fazla mutlak churn kaybını (420 müşteri) oluşturuyor.
+Kaybedilen harcamanın %43'ü Mobile kategorisinde yoğunlaşıyor.
+
+Win-Back Stratejisi: Dört aksiyon koluna (doğru veri toplanımı, bekarlara özel kampanyalar, kargo/teslimat geliştirmesi, kategori çeşitliliği) bağlı segment bazlı geri kazanım oranları üzerinden kötümser/orta/iyimser senaryolarla potansiyel geri kazanım hesaplandı. Detaylar için sunum dosyasına bakınız.
+
+Kullanılan Araçlar
+Python (pandas ve ilgili kütüphaneler) — veri temizleme ve işleme
+Power BI — interaktif dashboard ve görselleştirme
+PowerPoint — bulgu ve strateji sunumu
